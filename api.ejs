@@ -1,0 +1,76 @@
+<!-- <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    fffffffffffff
+ 
+  <h1> you </h1> 
+</body>
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Example</title>
+</head>
+<body>
+
+    <h1>gggggggggg</h1>
+    <button onclick="login()">Login</button>
+    <button onclick="getProtectedData()">Get Protected Data</button> -->
+
+
+    <!-- <script>
+        async function login() {
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({}),
+            });
+            const data = await response.json();
+            localStorage.getItem() -->
+            <!-- console.log('Token:', data.token);
+        }
+
+        async function getProtectedData() {
+            const token = prompt('Enter your token:'); // או כל אמצעי אחר לך לקבל את הטוקן מהמשתמש
+            const response = await fetch('/api/protected', {
+                method: 'GET',
+                headers: {
+                    'Authorization': 'Bearer ' + token,
+                },
+            });
+            const data = await response.json();
+            console.log(data);
+        }
+    </script> -->
+<!-- </body>
+</html> -->
+ 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Protected Page</title>
+</head>
+<body>
+  <h1>This is a protected page</h1>
+  <p>You are logged in as <b>{{ data.username }}</b>.</p>
+</body>
+</html>
+
+
