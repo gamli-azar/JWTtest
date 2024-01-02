@@ -56,21 +56,48 @@
     </script> -->
 <!-- </body>
 </html> -->
- 
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Protected Page</title>
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {   
+        let token = document.getElementById("myToken").textContent;
+        document.cookie = "access_token=" + token;
+    }); 
+    // function to check cookie exist
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    async function UpdateStatus(){
+        //make an ajax call and get status value using the same 'id'
+        res = await fetch("http://localhost:3000/api/verify");
+        alert(res.statusText)
+    }
+  </script>
 </head>
 <body>
   <h1>This is a protected page</h1>
-  <p>You are logged in as <b>{{ data.username }}</b>.</p>
+  <h2>This is your token buddy :) </h2>
+  <p>
+    You are logged in as 
+    <b id="myToken"> <%- data -%> </b>.
+  </p>
+  <button type="button" id="myVerify" onclick="UpdateStatus()">Verify Token</button> 
 </body>
 </html>
-
-

@@ -1,0 +1,19 @@
+{
+  "name": "JwtTest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gamli-azar/JWTtest.git",
+  "license": "MIT",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "scripts": {
+    "start": "nodemon jwt.js"
+  }
+}
