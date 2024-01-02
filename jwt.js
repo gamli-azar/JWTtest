@@ -34,6 +34,7 @@ app.get('/api/verify', (req, res) => {
         status: 'success'
       });
       res.end()
+      return
     }
     res.sendStatus(403);
   });
