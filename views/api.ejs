@@ -65,7 +65,7 @@
   <script>
     window.addEventListener("DOMContentLoaded", function() {   
         let token = document.getElementById("myToken").textContent;
-        document.cookie = "access_token=" + token;
+        document.cookie = "token=" + token;
     }); 
     async function updateStatus(){
         //make an ajax call and get status value using the same 'id'
@@ -78,8 +78,7 @@
   <h1>This is a protected page</h1>
   <h2>This is your token buddy :) </h2>
   <p>
-    You are logged in as 
-    <b id="myToken"> <%- data -%> </b>
+    You are logged in as
   </p>
   <button type="button" id="myVerify" onclick="updateStatus()">Verify Token</button> 
 </body>
