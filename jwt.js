@@ -22,7 +22,7 @@ app.get('/api', (req, res) => {
 app.post('/api/login', (req, res) => {
   const user = { id: 3 };
   const token = jwt.sign({ user }, 'my_secret_key', { expiresIn: '1d' });
-  res.cookie('token', token);
+  res.cookie('access_token', token);
   res.redirect('/api/protected');
 });
 
