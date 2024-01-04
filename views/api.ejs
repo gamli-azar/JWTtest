@@ -67,7 +67,7 @@
         let token = document.getElementById("myToken").textContent;
         document.cookie = "access_token=" + token;
     }); 
-    async function UpdateStatus(){
+    async function updateStatus(){
         //make an ajax call and get status value using the same 'id'
         res = await fetch("http://localhost:3000/api/verify");
         alert(res.statusText)
@@ -81,6 +81,6 @@
     You are logged in as 
     <b id="myToken"> <%- data -%> </b>.
   </p>
-  <button type="button" id="myVerify" onclick="UpdateStatus()">Verify Token</button> 
+  <button type="button" id="myVerify" onclick="updateStatus()">Verify Token</button> 
 </body>
 </html>
