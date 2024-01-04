@@ -67,23 +67,6 @@
         let token = document.getElementById("myToken").textContent;
         document.cookie = "access_token=" + token;
     }); 
-    // function to check cookie exist
-    function getCookie(cname) {
-        let name = cname + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(';');
-        for(let i = 0; i <ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-    }
-
     async function UpdateStatus(){
         //make an ajax call and get status value using the same 'id'
         res = await fetch("http://localhost:3000/api/verify");
